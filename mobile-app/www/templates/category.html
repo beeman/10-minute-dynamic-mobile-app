@@ -1,12 +1,13 @@
-<ion-view view-title="{{category.name}}">
+<ion-view view-title="Category Detail">
   <ion-content class="padding">
+    <div class="list card">
+      <div class="item-avatar">
+        <img ng-src="{{category.image}}">
+        <b>{{category.name}}</b>
+        <p>{{category.description}}</p>
+      </div>
+    </div>
     <ion-list>
-      <ion-item class="item item-avatar">
-          <img ng-src="{{category.image}}">
-          <h2>{{category.name}}</h2>
-          <p>{{category.description}}</p>
-      </ion-item>
-      <ion-item class="item-divider">Products</ion-item>
       <ion-item ng-repeat="product in products"
           href="#/app/categories/{{category.id}}/product/{{product.id}}"
           class="item item-avatar">
