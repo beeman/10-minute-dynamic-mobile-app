@@ -83,7 +83,7 @@ Copy [`init-data.js`](mobile-api/server/boot/init-data.js) to `server/boot` and 
 
 ### Show only the first five
 
-####  [`&filter[limit]=3`](http://localhost:3000/api/products/?filter[where][price][lt]=100&filter[order]=price%20desc&filter[limit]=3)
+####  [`&filter[limit]=5`](http://localhost:3000/api/products/?filter[where][price][lt]=100&filter[order]=price%20desc&filter[limit]=5)
 
 ## Read more
-### Official documentation on [creating]([Looback documentation](http://docs.strongloop.com/display/public/LB/Creating+models), [customizing](http://docs.strongloop.com/display/public/LB/Customizing+models) and [relating](http://docs.strongloop.com/display/public/LB/Creating+model+relations) models and [filtering](http://docs.strongloop.com/display/public/LB/Querying+data) data.
+### Official documentation on [creating](http://docs.strongloop.com/display/public/LB/Creating+models), [customizing](http://docs.strongloop.com/display/public/LB/Customizing+models) and [relating](http://docs.strongloop.com/display/public/LB/Creating+model+relations) models and [filtering](http://docs.strongloop.com/display/public/LB/Querying+data) data.
