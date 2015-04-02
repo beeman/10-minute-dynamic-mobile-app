@@ -68,7 +68,7 @@ Add [`faker.js`](https://github.com/marak/Faker.js/) to the project.
 
     $ npm install faker --save
 
-Copy [`init-data.js`](./init-data.js) to `server/boot` and restart the server.
+Copy [`init-data.js`](mobile-api/server/boot/init-data.js) to `server/boot` and restart the server.
 
     $ cp init-data.js server/boot
 
