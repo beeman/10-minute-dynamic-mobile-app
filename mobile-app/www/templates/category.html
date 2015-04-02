@@ -1,0 +1,12 @@
+<ion-view view-title="{{category.name}}">
+  <ion-content class="padding">
+    <ion-list>
+      <ion-item ng-repeat="product in products" href="#/app/categories/{{category.id}}/product/{{product.id}}">
+        {{product.name}}
+      </ion-item>
+    </ion-list>
+
+    <pre>{{category | json}}</pre>
+    <pre>{{products | json}}</pre>
+  </ion-content>
+</ion-view>

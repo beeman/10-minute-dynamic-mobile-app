@@ -40,6 +40,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+  .state('app.category', {
+    url: "/categories/:categoryId",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/category.html",
+        controller: 'CategoryCtrl'
+      }
+    }
+  })
   .state('app.playlists', {
     url: "/playlists",
     views: {
