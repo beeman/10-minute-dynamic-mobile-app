@@ -1,36 +1,62 @@
 # Create APP with ionic
 
-## Create the APP
+Use ionic to create an app that shows categories and their products.
 
-### Scaffold Ionic App
+## Scaffold ionic app
 
     $ ionic start mobile-app sideMenu
 
-### Start the app
+## Start the app
+
+Preview the app in your browser
+
+    $ ionic serve
+
+Or show iOS and Android side by side
 
     $ ionic serve --lab
 
-### Design app logic
+## Design app logic
 
 A logical flow through the data can be implemented in these screens.
 
     [Category list] -> [Product list] -> [Product detail]
 
+## Cleanup project
 
-### Remove routes and controller logic that are not needed
+### Remove controller logic, routes and templates that are no longer needed
 
-- Remove `app.search` and `app.browse` routes
 - Clean up `AppCtrl`
+- Remove `browse` and `search` routes
+- Remove `browse`, `login` and `search` templates
+- Update links in `menu` template
+- Update title in `menu` template
 
-### Remove screens that are not needed
+## Implement Category list
 
-- Remove `browse`, `login`, `search` templates
-- Update `menu` template
+- create route `app.categories`
+- update default route
+- create template `categories.html`
+- create controller `CategoriesCtrl`
+- set `categories` variable on scope
 
-### Use Playlist sample for categories
+## Implement Product list
 
-- create `categories` template
-- create `categories` route
-- create `categories` controller
+- create route `app.category`
+- create template `category.html`
+- create controller `CategoryCtrl`
+- set `category` variable on scope
+- set `products` variable on scope
 
-And do the same for the other screens.
+## Implement Product detail
+
+- create route `app.product`
+- create template `product.html`
+- create controller `ProductCtrl`
+- set `category` variable on scope
+- set `product` variable on scope
+
+## Clean up Playlist example code
+
+- remove route `app.playlists` and `app.single`
+- remove templates `playlist.html` and `playlists.html`

@@ -1,7 +1,6 @@
 
 # Create API with loopback
 
-
 Use loopback to create an API that serves the data of products and their categories.
 
 ## Model definition
