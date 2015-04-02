@@ -25,5 +25,13 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Category": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Product": {
+    "dataSource": "db",
+    "public": true
   }
 }
