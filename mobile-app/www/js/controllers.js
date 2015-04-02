@@ -1,7 +1,16 @@
 angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope) {
-  
+
+})
+
+.controller('CategoriesCtrl', function($scope) {
+  $scope.categories = [
+    { id: 1, name: 'Cat 1'},
+    { id: 2, name: 'Cat 2'},
+    { id: 3, name: 'Cat 3'},
+    { id: 4, name: 'Cat 4'},
+  ];
 })
 
 .controller('PlaylistsCtrl', function($scope) {
