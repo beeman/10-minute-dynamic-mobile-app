@@ -2,16 +2,16 @@
   <ion-content class="padding">
     <div class="list card">
       <div class="item-avatar">
-        <img ng-src="{{category.image}}">
+        <img ng-src="{{category.image}}/{{category.id}}">
         <b>{{category.name}}</b>
         <p>{{category.description}}</p>
       </div>
     </div>
     <ion-list>
       <ion-item ng-repeat="product in products"
-          href="#/app/categories/{{category.id}}/product/{{product.id}}"
+          href="#/app/categories/{{product.categoryId}}/product/{{product.id}}"
           class="item item-avatar">
-          <img ng-src="{{product.image}}">
+          <img ng-src="{{product.image}}/{{product.id | limitTo: -1}}">
           <h2>{{product.name}}</h2>
           <span class="item-note">$ {{product.price}}</span>
       </ion-item>

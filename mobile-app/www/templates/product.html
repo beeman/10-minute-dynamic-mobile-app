@@ -6,7 +6,7 @@
         <p>{{product.company}}</p>
       </div>
       <div class="item item-body">
-        <img class="full-image" ng-src="{{product.image}}">
+        <img class="full-image" ng-src="{{product.image}}/{{product.id | limitTo: -1}}">
         <p>{{product.description}}</p>
         <p>
           <a href="#" class="subdued">Only $ {{product.price}}</a>

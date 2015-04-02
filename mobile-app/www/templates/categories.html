@@ -4,7 +4,7 @@
       <ion-item ng-repeat="category in categories"
           href="#/app/categories/{{category.id}}"
           class="item item-avatar">
-          <img ng-src="{{category.image}}">
+          <img ng-src="{{category.image}}/{{category.id | limitTo: -1}}">
           <h2>{{category.name}}</h2>
           <p>{{category.description}}</p>
       </ion-item>

@@ -8,16 +8,14 @@ angular.module('starter.controllers', [])
   $scope.categories = Category.find();
 })
 
-.controller('CategoryCtrl', function($scope, $stateParams, Category, Product){
-  $scope.category = Category.findOne($stateParams.categoryId);
-  $scope.products = Product.find({
-    filter: { where: { categoryId: $stateParams.categoryId } }
-  });
+.controller('CategoryCtrl', function($scope, $stateParams, Category){
+  $scope.category = Category.findById({ id: $stateParams.categoryId });
+  $scope.products = Category.products({ id: $stateParams.categoryId });
 })
 
 .controller('ProductCtrl', function($scope, $stateParams, Category, Product){
-  $scope.category = Category.findOne($stateParams.categoryId);
-  $scope.product = Product.findOne($stateParams.productId);
+  $scope.category = Category.findById({ id: $stateParams.categoryId });
+  $scope.product = Product.findById({ id: $stateParams.productId });
 })
 
 ;

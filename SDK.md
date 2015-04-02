@@ -25,18 +25,15 @@ Add `'lbServices'` to the starter module in `app.js`.
 
 Inject Category and Product in our controllers.
 
-Get all the Categories
+Find all the Categories
 
     $scope.categories = Category.find();
 
-Get one Category or Product
+Find a Category or Product by ID
 
-    $scope.category = Category.findOne($stateParams.categoryId);
+    $scope.category = Category.findById({ id: $stateParams.categoryId });
+    $scope.product = Product.findById({ id: $stateParams.productId });
 
-    $scope.product = Product.findOne($stateParams.productId);
+Find Products in one Category
 
-Get Products in one Category
-
-    $scope.products = Product.find({
-      filter: { where: { categoryId: $stateParams.categoryId } }
-    });
+    $scope.products = Category.products({ id: $stateParams.categoryId });
