@@ -1,17 +1,12 @@
 
 # Create API with loopback
 
-### Scaffold Loopback API
 
-    $ slc loopback mobile-api
-    $ cd mobile-api
+Use loopback to create an API that serves the data of products and their categories.
 
-### Create Product and Category models
+## Model definition
 
-    $ slc loopback:model Category
-    $ slc loopback:model Product
-
-|Model          |Property     |Type    |Reqd |
+|Model          |Property     |Type    |Req |
 |---------------|-------------|--------|-----|
 | **Category**	| id  	      | string | yes |
 |        	      |	name        | string | yes |
@@ -25,19 +20,32 @@
 |							  | company     | string | no  |
 |							  | image       | string | no  |
 
-### Create additional model properties
+## Scaffold base project
+
+    $ slc loopback mobile-api
+    $ cd mobile-api
+
+## Create Product and Category models
+
+### Create models and add properties:
+
+    $ slc loopback:model Category
+    $ slc loopback:model Product
+
+### Add additional properties:
 
 	$ slc loopback:property
 
-### Create model relations
+## Create model relations
 
 	$ slc loopback:relation
 
-|From      |Relation |To       |
-|----------|---------|---------|
-| Category | hasMany | Product |
+|From      |Relation   |To        |Foreign key |
+|----------|-----------|----------|------------|
+| Category | hasMany   | Product  | categoryId |
+| Product  | belongsTo | Category | categoryId |
 
-### Start the server
+## Start the server
 
 	$ nodemon server/server.js
 
@@ -47,14 +55,14 @@ Some URL's to explore:
 - [Categories endpoint](http://localhost:3000/api/categories) or [count](http://localhost:3000/api/categories/count)
 - [Products endpoint](http://localhost:3000/api/products) or [count](http://localhost:3000/api/products/count)
 
-### Initial dataset
+## Dataset
 
-#### Manually
+### Manually adding data
 
 Go to the [API Explorer (based on swagger)](http://localhost:3000/explorer)
 and add the objects manually.
 
-#### Automatically
+### Automatically generating data
 
 Add [`faker.js`](https://github.com/marak/Faker.js/) to the project.
 
@@ -64,14 +72,19 @@ Copy [`init-data.js`](./init-data.js) to `server/boot` and restart the server.
 
     $ cp init-data.js server/boot
 
-##### Product price < 100
+## Querying the data
 
-[`?filter[where][price][lt]=100`](http://localhost:3000/api/products/?filter[where][price][lt]=100)
+### Product price less than 100
 
-##### Sorted by descending price
+####   [`?filter[where][price][lt]=100`](http://localhost:3000/api/products/?filter[where][price][lt]=100)
 
-[`&filter[order]=price%20desc`](http://localhost:3000/api/products/?filter[where][price][lt]=100&filter[order]=price%20desc)
+### Sorted by descending price
 
-##### Show only the first five
+####  [`&filter[order]=price%20desc`](http://localhost:3000/api/products/?filter[where][price][lt]=100&filter[order]=price%20desc)
 
-[`&filter[limit]=3`](http://localhost:3000/api/products/?filter[where][price][lt]=100&filter[order]=price%20desc&filter[limit]=3)
+### Show only the first five
+
+####  [`&filter[limit]=3`](http://localhost:3000/api/products/?filter[where][price][lt]=100&filter[order]=price%20desc&filter[limit]=3)
+
+## Read more
+### Official documentation on [creating]([Looback documentation](http://docs.strongloop.com/display/public/LB/Creating+models), [customizing](http://docs.strongloop.com/display/public/LB/Customizing+models) and [relating](http://docs.strongloop.com/display/public/LB/Creating+model+relations) models and [filtering](http://docs.strongloop.com/display/public/LB/Querying+data) data.
