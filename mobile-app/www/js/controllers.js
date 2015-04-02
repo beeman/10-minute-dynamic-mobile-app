@@ -31,6 +31,19 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('ProductCtrl', function($scope, $stateParams){
+
+  $scope.category = {
+    id: $stateParams.categoryId,
+    name: 'Cat ' + $stateParams.categoryId
+  }
+
+  $scope.product = {
+    id: $stateParams.productId,
+    name: 'Product ' + $stateParams.productId
+  }
+})
+
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
