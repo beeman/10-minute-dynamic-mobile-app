@@ -1,12 +1,19 @@
 <ion-view view-title="{{category.name}}">
   <ion-content class="padding">
     <ion-list>
-      <ion-item ng-repeat="product in products" href="#/app/categories/{{category.id}}/product/{{product.id}}">
-        {{product.name}}
+      <ion-item class="item item-avatar">
+          <img ng-src="{{category.image}}">
+          <h2>{{category.name}}</h2>
+          <p>{{category.description}}</p>
+      </ion-item>
+      <ion-item class="item-divider">Products</ion-item>
+      <ion-item ng-repeat="product in products"
+          href="#/app/categories/{{category.id}}/product/{{product.id}}"
+          class="item item-avatar">
+          <img ng-src="{{product.image}}">
+          <h2>{{product.name}}</h2>
+          <span class="item-note">$ {{product.price}}</span>
       </ion-item>
     </ion-list>
-
-    <pre>{{category | json}}</pre>
-    <pre>{{products | json}}</pre>
   </ion-content>
 </ion-view>

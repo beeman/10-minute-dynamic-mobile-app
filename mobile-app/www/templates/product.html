@@ -1,6 +1,17 @@
-<ion-view view-title="{{product.name}}">
-  <ion-content class="padding">
-    <pre>{{product | json}}</pre>
-    <pre>{{category | json}}</pre>
+<ion-view view-title="Product Detail">
+  <ion-content class="">
+    <div class="list card">
+      <div class="item item-divider">
+        <h2>{{product.name}}</h2>
+        <p>{{product.company}}</p>
+      </div>
+      <div class="item item-body">
+        <img class="full-image" ng-src="{{product.image}}">
+        <p>{{product.description}}</p>
+        <p>
+          <a href="#" class="subdued">Only $ {{product.price}}</a>
+        </p>
+      </div>
+    </div>
   </ion-content>
 </ion-view>
