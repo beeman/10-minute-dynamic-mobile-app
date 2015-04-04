@@ -1,0 +1,23 @@
+{
+  "name": "10-minute-dynamic-mobile-app",
+  "version": "1.0.0",
+  "description": "In this demo I'm going to create a dynamic mobile application in 10 minutes <sup>give or take, more or less ;)</sup>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "services": "lb-ng -u /api mobile-api/server/server.js mobile-app/www/lib/lb-services.js",
+    "dev_services": "lb-ng -u http://localhost:3000/api mobile-api/server/server.js mobile-app/www/lib/lb-services.js",
+    "start": "npm run services; node mobile-api/server/server.js",
+    "dev": "npm run dev_services; nodemon mobile-api/server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beeman/10-minute-dynamic-mobile-app.git"
+  },
+  "author": "Bram Borggreve <borggreve@gmail.com> (http://github.com/beeman)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beeman/10-minute-dynamic-mobile-app/issues"
+  },
+  "homepage": "https://github.com/beeman/10-minute-dynamic-mobile-app"
+}

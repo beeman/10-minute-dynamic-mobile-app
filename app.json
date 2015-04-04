@@ -1,0 +1,7 @@
+{
+  "name": "10-minute-dynamic-mobile-app",
+  "description": "A demo on how to create a dynamic mobile app in a few minutes",
+  "repository": "git@github.com:beeman/10-minute-dynamic-mobile-app.git",
+  "logo": "http://ionicframework.com/img/ionic-logo-blog.png",
+  "keywords": ["ionic", "static", "loopback"]
+}
