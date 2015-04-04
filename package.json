@@ -19,5 +19,21 @@
   "bugs": {
     "url": "https://github.com/beeman/10-minute-dynamic-mobile-app/issues"
   },
-  "homepage": "https://github.com/beeman/10-minute-dynamic-mobile-app"
+  "homepage": "https://github.com/beeman/10-minute-dynamic-mobile-app",
+  "dependencies": {
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "errorhandler": "^1.1.1",
+    "faker": "^2.1.2",
+    "loopback": "^2.14.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-datasource-juggler": "^2.19.0",
+    "serve-favicon": "^2.0.1"
+  },
+  "optionalDependencies": {
+    "loopback-explorer": "^1.1.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.5.6"
+  }
 }
