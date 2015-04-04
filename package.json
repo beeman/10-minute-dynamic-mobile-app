@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "services": "lb-ng -u /api mobile-api/server/server.js mobile-app/www/lib/lb-services.js",
-    "dev_services": "lb-ng -u http://localhost:3000/api mobile-api/server/server.js mobile-app/www/lib/lb-services.js",
+    "services": "./node_modules/loopback-sdk-angular-cli/bin/lb-ng -u /api mobile-api/server/server.js mobile-app/www/lib/lb-services.js",
+    "dev_services": "./node_modules/loopback-sdk-angular-cli/bin/lb-ng -u http://localhost:3000/api mobile-api/server/server.js mobile-app/www/lib/lb-services.js",
     "start": "npm run services; node mobile-api/server/server.js",
     "dev": "npm run dev_services; nodemon mobile-api/server/server.js"
   },
@@ -28,6 +28,7 @@
     "loopback": "^2.14.0",
     "loopback-boot": "^2.6.5",
     "loopback-datasource-juggler": "^2.19.0",
+    "loopback-sdk-angular-cli": "^1.1.4",
     "serve-favicon": "^2.0.1"
   },
   "optionalDependencies": {

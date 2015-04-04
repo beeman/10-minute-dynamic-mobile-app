@@ -17,3 +17,9 @@ Refer to [your friend](https://google.com/) on how to do this for your platform.
 ### Install the tools we are building with
     $ npm install -g loopback
     $ npm install -g ionic
+
+## See it live!
+
+Deploy this project to Heroku to play around with it!
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
