@@ -20,7 +20,10 @@
   },
   "routes": {
   },
-  "files": {
+  "files":  {
+    "loopback#static": {
+      "params": "$!../../mobile-app/www"
+    }
   },
   "final": {
     "loopback#urlNotFound": {}
