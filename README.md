@@ -17,6 +17,7 @@ Refer to [your friend](https://google.com/) on how to do this for your platform.
 ### Install the tools we are building with
     $ npm install -g loopback
     $ npm install -g ionic
+    $ npm install -g loopback-sdk-angular-cli
 
 ## See it live!
 
