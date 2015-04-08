@@ -4,7 +4,8 @@ Use ionic to create an app that shows categories and their products.
 
 ## Scaffold ionic app
 
-    $ ionic start mobile-app sideMenu
+    $ ionic start app sideMenu
+    $ cd app
 
 ## Start the app
 

@@ -6,7 +6,7 @@ Loopback offers a way to generate an AngularJS SDK based on your API.
 
 ### Generate the SDK
 
-    $ lb-ng mobile-api/server/server.js mobile-app/www/lib/lb-services.js
+    $ lb-ng api/server/server.js app/www/lib/lb-services.js
 
 ### Add SDK and its dependency
 

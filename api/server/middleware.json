@@ -22,7 +22,7 @@
   },
   "files":  {
     "loopback#static": {
-      "params": "$!../../mobile-app/www"
+      "params": "$!../../app/www"
     }
   },
   "final": {

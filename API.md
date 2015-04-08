@@ -3,9 +3,28 @@
 
 Use loopback to create an API that serves the data of products and their categories.
 
+## Datasources
+
+> LoopBack models connect to backend systems such as databases via data sources that provide create, retrieve, update, and delete (CRUD) functions. LoopBack also generalizes other backend services, such as REST APIs, SOAP web services, and storage services, and so on, as data sources. <sup>[(Source)](http://docs.strongloop.com/display/public/LB/Connecting+models+to+data+sources)</sup>
+
+LoopBack provides connectors for the following databases:
+
+- Memory (default)
+- MongoDB
+- MySQL
+- Oracle
+- PostgreSQL
+- Redis
+- SQL Server
+- [Elasticsearch](https://github.com/strongloop-community/loopback-connector-elastic-search) (Community project)
+
+## Models
+
+> A LoopBack model represents data in backend systems such as databases, and by default has both Node and REST APIs.  Additionally, you can add functionality such as validation rules and business logic to models <sup>[(Source)](http://docs.strongloop.com/display/public/LB/Defining+models)</sup>
+
 ## Model definition
 
-|Model          |Property     |Type    |Req |
+|Name           |Property     |Type    |Req |
 |---------------|-------------|--------|-----|
 | **Category**	| id  	      | string | yes |
 |        	      |	name        | string | yes |
@@ -19,10 +38,17 @@ Use loopback to create an API that serves the data of products and their categor
 |							  | company     | string | no  |
 |							  | image       | string | no  |
 
+## Model relations
+
+|From      |Relation   |To        |Foreign key |
+|----------|-----------|----------|------------|
+| Category | hasMany   | Product  | categoryId |
+| Product  | belongsTo | Category | categoryId |
+
 ## Scaffold base project
 
-    $ slc loopback mobile-api
-    $ cd mobile-api
+    $ slc loopback api
+    $ cd api
 
 ## Create Product and Category models
 
@@ -38,11 +64,6 @@ Use loopback to create an API that serves the data of products and their categor
 ## Create model relations
 
 	$ slc loopback:relation
-
-|From      |Relation   |To        |Foreign key |
-|----------|-----------|----------|------------|
-| Category | hasMany   | Product  | categoryId |
-| Product  | belongsTo | Category | categoryId |
 
 ## Start the server
 
@@ -67,7 +88,7 @@ Add [`faker.js`](https://github.com/marak/Faker.js/) to the project.
 
     $ npm install faker --save
 
-Copy [`init-data.js`](mobile-api/server/boot/init-data.js) to `server/boot` and restart the server.
+Copy [`init-data.js`](api/server/boot/init-data.js) to `server/boot` and restart the server.
 
     $ cp init-data.js server/boot
 

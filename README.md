@@ -1,6 +1,6 @@
 # 10 Minute Dynamic Mobile App
 
-In this demo I'm going to create a dynamic mobile application in 10 minutes <sup>give or take, more or less ;)</sup>
+This demo will show how to create a dynamic mobile application in 10 minutes <sup>give or take, more or less ;)</sup>
 
 ## How to do this?
 
@@ -10,16 +10,27 @@ In this demo I'm going to create a dynamic mobile application in 10 minutes <sup
 
 ## Requirements
 
-### `node`, `npm` and `nodemon` need to be installed globally.
+### The commands `node` and `npm` need to be working on your system.
 
 Refer to [your friend](https://google.com/) on how to do this for your platform.
 
-### Install the tools we are building with
-    $ npm install -g loopback
+### Nodemon
+
+We will use nodemon to automatically restart the server when we change our code:
+
+    $ npm install -g nodemon
+
+### Framework tools
+
+Read more about [strongloop](https://github.com/strongloop/strongloop/), [ionic](https://github.com/driftyco/ionic-cli)
+or [loopback-sdk-angular-cli](https://github.com/strongloop/loopback-sdk-angular-cli).
+
+
+    $ npm install -g strongloop
     $ npm install -g ionic
     $ npm install -g loopback-sdk-angular-cli
 
-## See it live!
+## Test it live!
 
 Deploy this project to Heroku to play around with it!
 

@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "services": "./node_modules/loopback-sdk-angular-cli/bin/lb-ng -u /api mobile-api/server/server.js mobile-app/www/lib/lb-services.js",
-    "dev_services": "./node_modules/loopback-sdk-angular-cli/bin/lb-ng -u http://localhost:3000/api mobile-api/server/server.js mobile-app/www/lib/lb-services.js",
-    "start": "npm run services; node mobile-api/server/server.js",
-    "dev": "npm run dev_services; nodemon mobile-api/server/server.js"
+    "services": "./node_modules/loopback-sdk-angular-cli/bin/lb-ng -u /api api/server/server.js app/www/lib/lb-services.js",
+    "dev_services": "./node_modules/loopback-sdk-angular-cli/bin/lb-ng -u http://localhost:3000/api api/server/server.js app/www/lib/lb-services.js",
+    "start": "npm run services; node api/server/server.js",
+    "dev": "npm run dev_services; nodemon api/server/server.js"
   },
   "repository": {
     "type": "git",
